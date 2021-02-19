@@ -1,0 +1,28 @@
+<?php
+include('../../config/config.php');
+
+$tensanpham = $_POST['tensanpham'];
+$masp = $_POST['masp'];
+$giasp = $_POST['giasp'];
+$soluong = $_POST['soluong'];
+//xử lý hình ảnh
+$hinhanh = $_FILES['hinhanh']['name'];
+$hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
+$hinhanh = time() . '_' . $hinhanh;
+$tomtat = $_POST['tomtat'];
+$noidung = $_POST['noidung'];
+$tinhtrang = $_POST['tinhtrang'];
+
+
+if (isset($_POST['themsanpham'])) {
+    $sql_them = "INSERT INTO tbl_sanpham(tensanpham,masp,giasp,soluong,hinhanh,tomtat,noidung,tinhtrang) VALUE('" . $tensanpham . "','" . $masp . "','" . $giasp . "','" . $soluong . "','" . $hinhanh . "','" . $tomtat . "','" . $noidung . "','" . $tinhtrang . "')";
+    mysqli_query($mysqli, $sql_them);
+    move_uploaded_file($hinhanh_tmp, 'upload/' . $hinhanh);
+    header('Location:../../index.php?action=quanlysanpham&query=them');
+} elseif (isset($_POST['suasanpham'])) {
+} else {
+    $id = $_GET['iddanhmuc'];
+    $sql_xoa = "DELETE FROM tbl_danhmuc WHERE id_danhmuc = '" . $id . "'";
+    mysqli_query($mysqli, $sql_xoa);
+    header('Location:../../index.php?action=quanlydanhmucsanpham');
+}

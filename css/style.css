@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    border: 1px solid black;
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header{
+    background-image: url(../images/baner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 180px;
+    border: 1px solid #ff80ff;
+    height: 180px;
+    width: 100%;
+    
+}
+
+.menu{
+    border: 1px solid #1aff8c;
+    height: 50px;
+    width: 100%;
+    background: #00e6ac;
+}
+
+ul.list-menu{
+    padding: 0;
+    margin: 0;
+    width: 60%;
+
+    list-style: none;
+    margin: 0 auto;
+    line-height: 27px;
+}
+ul.list-menu li:hover{
+    background: burlywood;
+}
+
+ul.list-menu li{
+    float: left;
+    margin: 7px;
+    padding: 5px;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+ul.list-sidebar{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    list-style: none;
+    line-height: 27px;
+}
+ul.list-sidebar li:hover{
+    background: cadetblue;
+}
+
+ul.list-sidebar li{
+    margin: 7px;
+    padding: 5px;
+}
+
+ul.list-sidebar li a{
+    text-decoration: none;
+    display: block;
+}
+.main{
+    border: 1px solid #00ff89;
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+.sidebar{
+    border: 1px solid #000066;
+    height: 390px;
+    width: 20%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.main_content{
+    border: 1px solid #ff0000;
+    height: auto;
+    width: 78%;
+    margin-top: 5px;
+    margin-left: 5px;
+    float: right;
+}
+
+ul.product-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+ul.product-list li{
+    width: 18%;
+    border: 1px dashed #000;
+    margin: 5px;
+    float: left;
+    background: #f2f2f2;
+    height: 260PX;
+}
+
+ul.product-list li img{
+    width: 100%;
+}
+
+p.price-product{
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+p.tittle-product{
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer{
+    border: 1px solid #000;
+    height: 150px;
+    width: 100%;
+    background: #00cc99;
+    
+}
+p.footer-copyright{
+    text-align: center;
+}
